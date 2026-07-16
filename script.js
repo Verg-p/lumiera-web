@@ -3,12 +3,24 @@
 // ===============================
 
 const hamburguesa = document.querySelector(".hamburguesa");
-const menuMovil = document.querySelector(".menu-movil");
+const menu = document.querySelector(".menu");
 
-// Abrir y cerrar el menú
+// Abrir y cerrar menú
 
 hamburguesa.addEventListener("click", () => {
 
-    menuMovil.classList.toggle("activo");
+    menu.classList.toggle("activo");
+
+});
+
+// Cerrar al pulsar un enlace
+
+document.querySelectorAll(".menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        menu.classList.remove("activo");
+
+    });
 
 });
