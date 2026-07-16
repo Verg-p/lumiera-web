@@ -225,6 +225,12 @@ header{
 
 }
 
+.menu-movil.activo{
+
+    right:0;
+
+}
+
 .menu-movil a{
 
     text-decoration:none;
