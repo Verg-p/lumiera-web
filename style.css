@@ -327,6 +327,12 @@ header{
 
 .btn-principal{
 
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     background:var(--color-dorado);
 
     color:var(--color-negro);
@@ -335,11 +341,13 @@ header{
 
     padding:18px 36px;
 
-    border-radius:40px;
+    border-radius:50px;
 
     font-weight:600;
 
-    transition:.3s;
+    min-width:220px;
+
+    transition:all .3s ease;
 
 }
 
@@ -347,9 +355,17 @@ header{
 
     transform:translateY(-4px);
 
+    box-shadow:0 18px 35px rgba(200,169,106,.35);
+
 }
 
 .btn-secundario{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     border:2px solid var(--color-dorado);
 
@@ -359,11 +375,13 @@ header{
 
     padding:18px 36px;
 
-    border-radius:40px;
+    border-radius:50px;
 
     font-weight:600;
 
-    transition:.3s;
+    min-width:220px;
+
+    transition:all .3s ease;
 
 }
 
@@ -371,8 +389,9 @@ header{
 
     background:var(--color-dorado);
 
-}
+    transform:translateY(-4px);
 
+}
 .hero-valores{
 
     display:grid;
