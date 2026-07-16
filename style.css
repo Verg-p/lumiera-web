@@ -299,11 +299,23 @@ section{
 
     }
 
-    .logo img{
+.logo img{
 
-        height:55px;
+height:55px;
 
-    }
+}
+
+/* NUEVO */
+
+.hamburguesa{
+
+display:block;
+
+font-size:32px;
+
+cursor:pointer;
+
+}
 
 }
 
