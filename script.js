@@ -23,6 +23,8 @@ document.querySelectorAll(".menu a").forEach(link => {
 
     });
 
+     });
+
 // ===============================
 // MODAL PRODUCTO
 // ===============================
