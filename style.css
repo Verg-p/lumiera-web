@@ -175,6 +175,9 @@ header{
 
     justify-content:space-between;
 
+   position:relative;
+   z-index:1001;
+
 }
 
 .hamburguesa span{
@@ -573,11 +576,41 @@ section{
 
     }
 
-    .menu{
+   .menu{
 
-        display:none;
+    position:fixed;
 
-    }
+    top:90px;
+
+    right:-100%;
+
+    width:80%;
+
+    height:calc(100vh - 90px);
+
+    background:var(--color-blanco);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:40px;
+
+    gap:35px;
+
+    transition:right .35s ease;
+
+    box-shadow:-10px 0 25px rgba(0,0,0,.12);
+
+}
+
+   .menu.activo{
+
+    right:0;
+
+}
 
     .btn-menu{
 
