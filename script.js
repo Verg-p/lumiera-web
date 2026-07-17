@@ -59,10 +59,8 @@ tarjetas.forEach(tarjeta => {
         modalPrecio.textContent = tarjeta.dataset.precio;
 
         modalLista.innerHTML = `
-            <li>✔ Personalizable</li>
-            <li>✔ Colores disponibles: ${tarjeta.dataset.colores}</li>
-            <li>✔ Elaborado artesanalmente</li>
-            <li>✔ Ideal para recuerdos</li>
+            <li>✔ Personalizable en color y aroma</li>
+            <li>✔  Disponible con tul o caja de regalo.</li>
         `;
 
         modal.classList.add("activo");
