@@ -794,6 +794,10 @@ section{
 
     align-items:center;
 
+    overflow-y:auto;
+   
+    padding:40px 20px;
+
     opacity:0;
 
     visibility:hidden;
@@ -824,6 +828,8 @@ section{
 
     padding:40px;
 
+   margin:auto;
+
     position:relative;
 
     text-align:center;
@@ -836,7 +842,7 @@ section{
 
     width:100%;
 
-    max-height:420px;
+    max-height:300px;
 
     object-fit:cover;
 
