@@ -779,6 +779,53 @@ height:55px;
     height:320px;
 
 }
+
+.grid-catalogo{
+
+    grid-template-columns:1fr;
+
+}
+
+.card-producto{
+
+    width:100%;
+
+}
+
+.card-producto img{
+
+    height:320px;
+
+}
+
+.overlay-producto{
+
+    opacity:1;
+
+    justify-content:flex-end;
+
+    padding-bottom:30px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.15),
+        transparent
+    );
+
+}
+
+.overlay-producto h3{
+
+    font-size:28px;
+
+}
+
+.overlay-producto span{
+
+    margin-top:10px;
+
+}
 }
 
 /* ==========================================
