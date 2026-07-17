@@ -31,35 +31,58 @@ if (hamburguesa && menu) {
 }
 
 // ===============================
-// MODAL PRODUCTO
+// MODAL PRODUCTOS
 // ===============================
 
-const modal = document.getElementById("modalProducto");
-const abrirModal = document.querySelector(".overlay-producto");
+const modal = document.querySelector("#modalProducto");
+
 const cerrarModal = document.querySelector(".cerrar-modal");
 
-if (modal && abrirModal && cerrarModal) {
+const tarjetas = document.querySelectorAll(".card-producto");
 
-    abrirModal.addEventListener("click", () => {
+const modalImagen = document.querySelector("#modalImagen");
+const modalTitulo = document.querySelector("#modalTitulo");
+const modalDescripcion = document.querySelector("#modalDescripcion");
+const modalLista = document.querySelector("#modalLista");
+const modalPrecio = document.querySelector("#modalPrecio");
+
+tarjetas.forEach(tarjeta => {
+
+    tarjeta.addEventListener("click", () => {
+
+        modalImagen.src = tarjeta.dataset.imagen;
+
+        modalTitulo.textContent = tarjeta.dataset.nombre;
+
+        modalDescripcion.textContent = tarjeta.dataset.descripcion;
+
+        modalPrecio.textContent = tarjeta.dataset.precio;
+
+        modalLista.innerHTML = `
+            <li>✔ Personalizable</li>
+            <li>✔ Colores disponibles: ${tarjeta.dataset.colores}</li>
+            <li>✔ Elaborado artesanalmente</li>
+            <li>✔ Ideal para recuerdos</li>
+        `;
 
         modal.classList.add("activo");
 
     });
 
-    cerrarModal.addEventListener("click", () => {
+});
+
+cerrarModal.addEventListener("click", () => {
+
+    modal.classList.remove("activo");
+
+});
+
+modal.addEventListener("click", (e) => {
+
+    if(e.target === modal){
 
         modal.classList.remove("activo");
 
-    });
+    }
 
-    modal.addEventListener("click", (e) => {
-
-        if (e.target === modal) {
-
-            modal.classList.remove("activo");
-
-        }
-
-    });
-
-}
+});
