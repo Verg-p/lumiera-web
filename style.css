@@ -1009,6 +1009,74 @@ section{
     line-height:28px;
 
 }
+
+/* CTA CONTACTO */
+
+.cta-contacto{
+
+    margin-top:90px;
+
+    text-align:center;
+
+    padding:70px 40px;
+
+    background:#F8F5F1;
+
+    border-radius:30px;
+
+}
+
+.cta-contacto h2{
+
+    font-family:var(--fuente-titulo);
+
+    font-size:46px;
+
+    margin-bottom:25px;
+
+}
+
+.cta-contacto p{
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+    color:var(--color-gris);
+
+    line-height:32px;
+
+    font-size:18px;
+
+}
+
+.btn-contacto{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    background:var(--color-dorado);
+
+    color:#000;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-contacto:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
 /* ===== RESPONSIVE ===== */
 
 @media (max-width:900px){
@@ -1175,6 +1243,26 @@ height:55px;
 .redes-contacto{
 
     grid-template-columns:1fr;
+
+}
+
+.cta-contacto{
+
+    padding:50px 25px;
+
+}
+
+.cta-contacto h2{
+
+    font-size:34px;
+
+}
+
+.cta-contacto p{
+
+    font-size:16px;
+
+    line-height:28px;
 
 }
 }
