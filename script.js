@@ -60,7 +60,7 @@ tarjetas.forEach(tarjeta => {
 
         modalLista.innerHTML = `
             <li>✔ Personalizable en color y aroma.</li>
-            <li>✔  Disponible con tull, caja de regalo o backing card.</li>
+            <li>✔  Disponible con tull, caja de regalo o backing card personalizable.</li>
         `;
 
         modal.classList.add("activo");
