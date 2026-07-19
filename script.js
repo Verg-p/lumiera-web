@@ -84,21 +84,15 @@ imagenes.forEach((imagen, indice)=>{
 
     }
 
-    mini.addEventListener("click", ()=>{
+mini.addEventListener("click", ()=>{
 
-        imagenActual = indice;
+    imagenActual = indice;
 
-        modalImagen.src = imagen;
+    modalImagen.src = imagenes[imagenActual];
 
-        document.querySelectorAll(".miniaturas img").forEach(img=>{
+    actualizarMiniaturas();
 
-            img.classList.remove("activa");
-
-        });
-
-        mini.classList.add("activa");
-
-    });
+});
 
     miniaturas.appendChild(mini);
 
@@ -120,6 +114,64 @@ imagenes.forEach((imagen, indice)=>{
     });
 
 });
+
+// ===============================
+// FLECHA DERECHA
+// ===============================
+
+flechaDerecha.addEventListener("click", (e)=>{
+
+    e.stopPropagation();
+
+    imagenActual++;
+
+    if(imagenActual >= imagenes.length){
+
+        imagenActual = 0;
+
+    }
+
+    modalImagen.src = imagenes[imagenActual];
+
+    actualizarMiniaturas();
+
+});
+
+// ===============================
+// FLECHA IZQUIERDA
+// ===============================
+
+flechaIzquierda.addEventListener("click", (e)=>{
+
+    e.stopPropagation();
+
+    imagenActual--;
+
+    if(imagenActual < 0){
+
+        imagenActual = imagenes.length-1;
+
+    }
+
+    modalImagen.src = imagenes[imagenActual];
+
+    actualizarMiniaturas();
+
+});
+
+// ===============================
+// ACTUALIZAR MINIATURAS
+// ===============================
+
+function actualizarMiniaturas(){
+
+    document.querySelectorAll(".miniaturas img").forEach((img, indice)=>{
+
+        img.classList.toggle("activa", indice===imagenActual);
+
+    });
+
+}
 
 cerrarModal.addEventListener("click", () => {
 
