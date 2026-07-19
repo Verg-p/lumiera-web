@@ -46,11 +46,63 @@ const modalDescripcion = document.querySelector("#modalDescripcion");
 const modalLista = document.querySelector("#modalLista");
 const modalPrecio = document.querySelector("#modalPrecio");
 
+// ===============================
+// GALERÍA DEL MODAL
+// ===============================
+
+const miniaturas = document.querySelector("#miniaturas");
+
+const flechaIzquierda = document.querySelector(".flecha-izquierda");
+
+const flechaDerecha = document.querySelector(".flecha-derecha");
+
+let imagenes = [];
+
+let imagenActual = 0;
+
 tarjetas.forEach(tarjeta => {
 
     tarjeta.addEventListener("click", () => {
 
-        modalImagen.src = tarjeta.dataset.imagen;
+imagenes = tarjeta.dataset.imagenes.split(",");
+
+imagenActual = 0;
+
+modalImagen.src = imagenes[imagenActual];
+
+miniaturas.innerHTML = "";
+
+imagenes.forEach((imagen, indice)=>{
+
+    const mini = document.createElement("img");
+
+    mini.src = imagen;
+
+    if(indice === 0){
+
+        mini.classList.add("activa");
+
+    }
+
+    mini.addEventListener("click", ()=>{
+
+        imagenActual = indice;
+
+        modalImagen.src = imagen;
+
+        document.querySelectorAll(".miniaturas img").forEach(img=>{
+
+            img.classList.remove("activa");
+
+        });
+
+        mini.classList.add("activa");
+
+    });
+
+    miniaturas.appendChild(mini);
+
+});
 
         modalTitulo.textContent = tarjeta.dataset.nombre;
 
