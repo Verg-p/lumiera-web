@@ -60,6 +60,12 @@ let imagenes = [];
 
 let imagenActual = 0;
 
+// Swipe móvil
+
+let inicioX = 0;
+
+let finX = 0;
+
 tarjetas.forEach(tarjeta => {
 
     tarjeta.addEventListener("click", () => {
@@ -119,7 +125,13 @@ mini.addEventListener("click", ()=>{
 // FLECHA DERECHA
 // ===============================
 
-flechaDerecha.addEventListener("click", (e)=>{
+flechaDerecha.addEventListener("click",(e)=>{
+
+    e.stopPropagation();
+
+    siguienteImagen();
+
+});
 
     e.stopPropagation();
 
@@ -141,7 +153,13 @@ flechaDerecha.addEventListener("click", (e)=>{
 // FLECHA IZQUIERDA
 // ===============================
 
-flechaIzquierda.addEventListener("click", (e)=>{
+flechaIzquierda.addEventListener("click",(e)=>{
+
+    e.stopPropagation();
+
+    anteriorImagen();
+
+});
 
     e.stopPropagation();
 
@@ -158,6 +176,38 @@ flechaIzquierda.addEventListener("click", (e)=>{
     actualizarMiniaturas();
 
 });
+
+function siguienteImagen(){
+
+    imagenActual++;
+
+    if(imagenActual >= imagenes.length){
+
+        imagenActual = 0;
+
+    }
+
+    modalImagen.src = imagenes[imagenActual];
+
+    actualizarMiniaturas();
+
+}
+
+function anteriorImagen(){
+
+    imagenActual--;
+
+    if(imagenActual < 0){
+
+        imagenActual = imagenes.length-1;
+
+    }
+
+    modalImagen.src = imagenes[imagenActual];
+
+    actualizarMiniaturas();
+
+}
 
 // ===============================
 // ACTUALIZAR MINIATURAS
@@ -186,5 +236,39 @@ modal.addEventListener("click", (e) => {
         modal.classList.remove("activo");
 
     }
+    
+    // ===============================
+// SWIPE EN CELULAR
+// ===============================
+
+modalImagen.addEventListener("touchstart", (e)=>{
+
+    inicioX = e.changedTouches[0].screenX;
+
+});
+
+modalImagen.addEventListener("touchend", (e)=>{
+
+    finX = e.changedTouches[0].screenX;
+
+    manejarSwipe();
+
+});
+
+function manejarSwipe(){
+
+    if(inicioX - finX > 50){
+
+        siguienteImagen();
+
+    }
+
+    if(finX - inicioX > 50){
+
+        anteriorImagen();
+
+    }
+
+}
 
 });
