@@ -1216,6 +1216,107 @@ section{
     color:#9c9c9c;
 
 }
+
+/* =========================
+   NOSOTROS
+========================= */
+
+.nosotros{
+
+    width:90%;
+    max-width:1400px;
+    margin:120px auto;
+
+}
+
+.nosotros-contenido{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+    margin-top:70px;
+
+}
+
+.nosotros-imagen img{
+
+    width:100%;
+    border-radius:25px;
+    display:block;
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.nosotros-texto{
+
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+
+}
+
+.valor{
+
+    padding-bottom:25px;
+    border-bottom:1px solid #ececec;
+
+}
+
+.valor:last-child{
+
+    border-bottom:none;
+
+}
+
+.valor h3{
+
+    font-family:var(--fuente-titulo);
+    font-size:30px;
+    margin-bottom:15px;
+
+}
+
+.valor p{
+
+    color:var(--color-gris);
+    line-height:30px;
+
+}
+
+.mision-vision{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:90px;
+
+}
+
+.card-mision{
+
+    background:#F8F5F1;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.card-mision h3{
+
+    font-family:var(--fuente-titulo);
+    font-size:34px;
+    margin-bottom:20px;
+    color:var(--color-dorado);
+
+}
+
+.card-mision p{
+
+    color:var(--color-gris);
+    line-height:30px;
+
+}
 /* ===== RESPONSIVE ===== */
 
 @media (max-width:900px){
@@ -1420,6 +1521,26 @@ height:55px;
 .footer-eslogan{
 
     font-size:24px;
+
+}
+
+/* NOSOTROS */
+
+.nosotros-contenido{
+
+    grid-template-columns:1fr;
+
+}
+
+.mision-vision{
+
+    grid-template-columns:1fr;
+
+}
+
+.valor h3{
+
+    font-size:26px;
 
 }
 }
