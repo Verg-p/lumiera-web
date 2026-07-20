@@ -59,7 +59,15 @@ tarjetas.forEach(tarjeta => {
 
     tarjeta.addEventListener("click", () => {
 
-        imagenes = tarjeta.dataset.imagenes.split(",");
+if (tarjeta.dataset.imagenes) {
+
+    imagenes = tarjeta.dataset.imagenes.split(",");
+
+} else {
+
+    imagenes = [tarjeta.dataset.imagen];
+
+}
 
         imagenActual = 0;
 
