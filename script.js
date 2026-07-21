@@ -61,7 +61,9 @@ tarjetas.forEach(tarjeta => {
 
 if (tarjeta.dataset.imagenes) {
 
-    imagenes = tarjeta.dataset.imagenes.split(",");
+    imagenes = tarjeta.dataset.imagenes
+        .split(",")
+        .map(img => img.trim());
 
 } else {
 
@@ -69,9 +71,11 @@ if (tarjeta.dataset.imagenes) {
 
 }
 
-        imagenActual = 0;
+imagenActual = 0;
 
-        modalImagen.src = imagenes[0];
+modalImagen.src = imagenes[imagenActual];
+
+crearMiniaturas();
 
         modalTitulo.textContent = tarjeta.dataset.nombre;
         modalDescripcion.textContent = tarjeta.dataset.descripcion;
