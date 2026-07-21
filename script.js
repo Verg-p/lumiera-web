@@ -47,6 +47,10 @@ const modalPrecio = document.querySelector("#modalPrecio");
 let imagenes = [];
 let imagenActual = 0;
 
+const miniaturas = document.querySelector("#miniaturas");
+const flechaIzquierda = document.querySelector(".flecha-izquierda");
+const flechaDerecha = document.querySelector(".flecha-derecha");
+
 // ===============================
 // ABRIR MODAL
 // ===============================
