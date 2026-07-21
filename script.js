@@ -92,6 +92,103 @@ crearMiniaturas();
 
 });
 
+function crearMiniaturas() {
+
+    miniaturas.innerHTML = "";
+
+    imagenes.forEach((imagen, indice) => {
+
+        const mini = document.createElement("img");
+
+        mini.src = imagen;
+
+        if (indice === imagenActual) {
+
+            mini.classList.add("activa");
+
+        }
+
+        mini.addEventListener("click", () => {
+
+            imagenActual = indice;
+
+            modalImagen.src = imagenes[imagenActual];
+
+            actualizarMiniaturas();
+
+        });
+
+        miniaturas.appendChild(mini);
+
+    });
+
+}
+
+function actualizarMiniaturas() {
+
+    document.querySelectorAll(".miniaturas img").forEach((img, indice) => {
+
+        img.classList.toggle("activa", indice === imagenActual);
+
+    });
+
+}
+
+function siguienteImagen() {
+
+    imagenActual++;
+
+    if (imagenActual >= imagenes.length) {
+
+        imagenActual = 0;
+
+    }
+
+    modalImagen.src = imagenes[imagenActual];
+
+    actualizarMiniaturas();
+
+}
+
+function anteriorImagen() {
+
+    imagenActual--;
+
+    if (imagenActual < 0) {
+
+        imagenActual = imagenes.length - 1;
+
+    }
+
+    modalImagen.src = imagenes[imagenActual];
+
+    actualizarMiniaturas();
+
+}
+
+if (flechaDerecha) {
+
+    flechaDerecha.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        siguienteImagen();
+
+    });
+
+}
+
+if (flechaIzquierda) {
+
+    flechaIzquierda.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        anteriorImagen();
+
+    });
+
+}
 
 // ===============================
 // CERRAR MODAL
