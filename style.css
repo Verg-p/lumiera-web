@@ -1646,4 +1646,24 @@ height:55px;
     font-size:26px;
 
 }
+
+.link-aromas{
+
+    display:block;
+    text-align:center;
+    margin:20px 0;
+    font-family:var(--fuente-secundaria);
+    font-size:15px;
+    color:var(--color-dorado);
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.link-aromas:hover{
+
+    letter-spacing:.5px;
+    color:#b48c45;
+
+}
 }
