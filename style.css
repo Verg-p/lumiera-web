@@ -1666,4 +1666,63 @@ height:55px;
     color:#b48c45;
 
 }
+
+/*==============================
+FRAGANCIAS MODAL
+==============================*/
+
+.card-aromas{
+
+    display:block;
+    margin:25px 0;
+    padding:22px;
+    background:#F8F5F1;
+    border-radius:18px;
+    text-decoration:none;
+    text-align:center;
+    border:1px solid rgba(200,169,106,.25);
+    transition:.35s;
+
+}
+
+.card-aromas:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.titulo-aromas{
+
+    display:block;
+    font-family:var(--fuente-principal);
+    font-size:18px;
+    color:var(--color-dorado);
+    margin-bottom:10px;
+    font-weight:600;
+
+}
+
+.card-aromas p{
+
+    font-size:15px;
+    color:#666;
+    line-height:1.7;
+    margin-bottom:15px;
+
+}
+
+.explorar-aromas{
+
+    color:var(--color-dorado);
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.card-aromas:hover .explorar-aromas{
+
+    letter-spacing:.5px;
+
+}
 }
