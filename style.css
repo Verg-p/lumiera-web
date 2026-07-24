@@ -1725,4 +1725,69 @@ FRAGANCIAS MODAL
     letter-spacing:.5px;
 
 }
+
+/*====================================
+AROMAS
+====================================*/
+
+.aromas{
+
+    padding:120px 8%;
+    background:#F8F5F1;
+
+}
+
+.contenedor-aromas{
+
+    max-width:1200px;
+    margin:60px auto 0;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+
+}
+
+.categoria-aroma{
+
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    transition:.35s;
+
+}
+
+.categoria-aroma:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+}
+
+.categoria-aroma h3{
+
+    font-family:var(--fuente-principal);
+    color:var(--color-dorado);
+    font-size:28px;
+    margin-bottom:18px;
+
+}
+
+.categoria-aroma p{
+
+    font-size:15px;
+    color:#666;
+    line-height:2;
+
+}
+
+@media(max-width:900px){
+
+    .contenedor-aromas{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
 }
