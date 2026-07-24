@@ -84,6 +84,11 @@ crearMiniaturas();
         modalLista.innerHTML = `
             <li>✔️ Personalizable en color y aroma.</li>
             <li>✔️ Disponible con tull, caja de regalo o backing card personalizable.</li>
+             <li>
+        <a href="aromas.html" class="link-aromas">
+            🌿 Descubre nuestras fragancias →
+        </a>
+    </li>
         `;
 
         modal.classList.add("activo");
